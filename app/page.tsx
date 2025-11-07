@@ -3,10 +3,6 @@
 import Image from "next/image";
 import { useState } from "react";
 
-import { FaUser } from "react-icons/fa";
-import { IoIosMail } from "react-icons/io";
-import { IoIosSend } from "react-icons/io";
-import { IoIosWarning } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
@@ -257,25 +253,61 @@ export default function Home() {
           {/* RIGHT SIDE - INSTRUCTOR */}
           <div className="relative flex justify-center items-center">
             {/* Instructor Image */}
-            <div className="relative w-[600px] h-[600px] rounded-full overflow-hidden border-4 border-red-600 shadow-[0_0_40px_rgba(255,0,0,0.6)]">
+            <div className="w-full relative">
               <Image
                 width={500}
                 height={500}
-                src="/mter.jpg"
+                src="/assets/banner/btc3.png"
                 alt="Giảng viên Master Phúc"
                 className="object-cover w-full h-full"
               />
+              <div className="absolute top-0 left-0 right-0 bottom-0 flex items-center">
+                <div>
+                  <div className="flex">
+                    <Image
+                      width={500}
+                      height={500}
+                      src="/assets/banner/4.png"
+                      alt="Giảng viên Master Phúc"
+                      className="object-cover w-1/2 h-1/2"
+                    />
+                    <Image
+                      width={500}
+                      height={500}
+                      src="/assets/banner/5.png"
+                      alt="Giảng viên Master Phúc"
+                      className="object-cover w-1/2 h-1/2"
+                    />
+                  </div>
+                  <div className="flex">
+                    <Image
+                      width={500}
+                      height={500}
+                      src="/assets/banner/6.png"
+                      alt="Giảng viên Master Phúc"
+                      className="object-cover w-1/2 h-1/2"
+                    />
+                    <Image
+                      width={500}
+                      height={500}
+                      src="/assets/banner/3.png"
+                      alt="Giảng viên Master Phúc"
+                      className="object-cover w-1/2 h-1/2"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Label */}
-            <div className="absolute -bottom-8 bg-red-700 px-6 py-3 rounded-md text-center shadow-lg w-[90%] max-w-sm">
-              <p className="font-bold text-white text-lg uppercase">
-                Giảng viên: MASTER PHÚC
-              </p>
-              <p className="text-sm text-gray-200">
-                Nhà giao dịch chuyên nghiệp với hơn 6 năm kinh nghiệm Forex
-                &amp; XAUUSD
-              </p>
+            <div className="absolute -bottom-8 px-6 py-3 rounded-md flex justify-center shadow-lg w-[90%] max-w-sm">
+              <Image
+                width={500}
+                height={500}
+                src="/assets/banner/btc.png"
+                alt="img"
+                className="object-cover w-full h-full"
+              />
             </div>
           </div>
         </div>
