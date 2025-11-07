@@ -76,3 +76,18 @@ html {
 .smoothly-scale:hover {
   animation: none;
 }
+
+#hero {
+  position: relative;
+}
+
+#hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/public/background1.jpg');
+  z-index: -10;
+}

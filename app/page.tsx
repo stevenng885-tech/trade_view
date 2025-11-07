@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
@@ -9,6 +9,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { SiZalo } from "react-icons/si";
 import { FaTiktok } from "react-icons/fa";
 import ContactForm from "./components/ContactForm";
+import useWindowDimensions from "./hooks/useWindowDimensions";
 
 const menu = [
   {
@@ -29,27 +30,74 @@ const menu = [
   },
 ]
 
+function useWindowSize() {
+  // Initialize state with undefined width/height so server and client renders match
+  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+  const [windowSize, setWindowSize] = useState<{
+    width: undefined | number,
+    height: undefined | number,
+  }>({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    // only execute all the code below in client side
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width/height to state
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); // Empty array ensures that effect is only run on mount
+  return windowSize;
+}
+
+
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [isLoading, setIsLoading] = useState(true);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  React.useEffect(() => {
+    (async () => {
+      new Promise(async (rs) => {
+        await setTimeout(() => {
+          rs(setIsLoading(false))
+        }, 4000)
+      })
+    })()
+  }, [])
+  if (true) {
+    return (
+      <div className="">
+        <video autoPlay={true} muted loop id="myVideo" className="fixed max-h-screen !min-w-screen max-w-none ml-[50vw] translate-x-[-50%]" >
+          <source src={`/assets/videos/intro.mp4`} type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    )
+  }
 
   return (
     <div
-      className="min-h-screen bg-black relative overflow-hidden"
+      className="min-h-screen bg-black relative overflow-hidden "
       style={{
         backgroundImage: "url('/background.jpg')",
         backgroundSize: "100% auto",
         backgroundPosition: "center",
       }}
     >
-      {/* 🔹 Background Decorative Elements (viền đỏ góc mờ nhẹ) */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute -top-16 -left-16 w-72 h-72 border border-red-600 rotate-45"></div>
-        <div className="absolute top-24 right-10 w-64 h-64 border border-red-600 rotate-45"></div>
-        <div className="absolute bottom-10 left-1/3 w-48 h-48 border border-red-600 rotate-45"></div>
-      </div>
-
       {/* 🔹 Navigation Bar */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-black border-b-2 border-red-700 shadow-[0_0_20px_rgba(255,0,0,0.3)]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -195,7 +243,7 @@ export default function Home() {
       {/* 🔥 HERO SECTION */}
       <section
         id="hero"
-        className="relative bg-black overflow-hidden"
+        className="relative bg-black overflow-hidden bg-cover"
         style={{
           backgroundImage: "url('/background1.jpg')",
           backgroundSize: "100% auto",
@@ -245,11 +293,11 @@ export default function Home() {
                 Điền thông tin bên dưới
               </h3>
               <p className="text-sm font-bold uppercase text-white mb-2">
-                Tham gia khoá học miễn phí ngay! <br />
+                Tham gia cồng đồng miễn phí ngay! <br />
                 Chỉ dành cho
                 <span className="text-red-800 font-bold underline ">
                   {" "}
-                  100 slot
+                  Thành viên
                 </span>{" "}
                 – đăng ký nhanh nhất!
               </p>
@@ -1026,7 +1074,7 @@ export default function Home() {
               </h3>
               <p className="text-yellow-300 text-center font-semibold mb-4 text-sm md:text-base">
                 Tham gia miễn phí ngay! <br /> Chỉ dành cho{" "}
-                <span className="text-white">100 slot</span> đăng ký nhanh nhất
+                <span className="text-white">Thành viên</span> đăng ký nhanh nhất
               </p>
 
               <ContactForm />
@@ -1100,6 +1148,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+    </div >
   );
 }
