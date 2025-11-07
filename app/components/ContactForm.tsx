@@ -88,7 +88,7 @@ const ContactForm = () => {
             <input
                 {...register("email", rules.email)}
                 type="email"
-                placeholder="Email"
+                placeholder="Email ( Có thể bỏ trống )"
                 className="w-full px-4 py-3 rounded-md bg-white text-black focus:ring-2 focus:ring-red-500 focus:outline-none"
             />
             {

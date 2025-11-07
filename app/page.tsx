@@ -993,9 +993,9 @@ export default function Home() {
             <div className="space-y-4">
               {[
                 "Khóa học 2 buổi “Bí Quyết Sống Sót Cùng Crypto – Nến Thanh Khoản” trị giá 5.000.000 VNĐ → Nay chỉ 0đ",
-                "Chỉ báo Nến Thanh Khoản độc quyền – Chỉ cấp cho các học viên",
+                "cộng cụ chỉ báo độc quyền của alpha net , chỉ cung cấp cho hội viên",
                 "3–5 tín hiệu chuẩn phương pháp mỗi ngày, trực tiếp từ team phân tích",
-                "Bộ tài liệu Wyckoff / VSA / Price Action (10.000.000 VNĐ) – để bạn hiểu sâu cấu trúc thị trường.",
+                "Được hỗ trợ kèm 1-1 trực tiếp từ các chuyên gia lâu năm trong thị trường, bạn sẽ không còn phải tự mò mẫm một mình nữa.",
               ].map((text, i) => (
                 <div
                   key={i}
@@ -1014,16 +1014,8 @@ export default function Home() {
           <div className="space-y-6">
             {/* Price Box */}
             <div className="bg-black/80 border-2 border-red-700 p-6 text-center rounded-lg">
-              <p className="text-xl md:text-2xl font-bold text-white mb-1">
-                Tổng trị giá hơn :{" "}
-                <span className="line-through text-gray-400">
-                  15.000.000 VNĐ
-                </span>
-              </p>
-              <p className="text-lg md:text-xl text-yellow-400 font-semibold">
-                Nhưng{" "}
-                <span className="text-red-500 font-bold">MIỄN PHÍ 100%</span>{" "}
-                nếu bạn đăng ký hôm nay
+              <p className="text-xl md:text-2xl font-bold text-white mb-1 uppercase">
+                đăng ký hôm nay
               </p>
             </div>
 
@@ -1055,56 +1047,6 @@ export default function Home() {
           <p className="text-red-500 font-bold uppercase">
             Hãy để bản thân tìm đúng cộng đồng – nơi giúp bạn hiểu thị trường và kiếm lợi nhuận một cách thực chiến.
           </p>
-        </div>
-      </section>
-
-      <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-[#160000] border-t border-red-700">
-        <div className="max-w-5xl mx-auto">
-          <h3 className="text-xl md:text-2xl font-semibold text-white mb-6">
-            Thông tin chương trình
-          </h3>
-
-          <div className="grid md:grid-cols-2 gap-8 text-sm md:text-base">
-            {/* Cột trái */}
-            <div className="space-y-3">
-              <div className="flex items-start space-x-2">
-                <span className="text-red-600 text-lg mt-0.5">▶</span>
-                <p className="text-white">
-                  <span className="font-semibold">Hình thức:</span> Zoom Online
-                </p>
-              </div>
-              <div className="flex items-start space-x-2">
-                <span className="text-red-600 text-lg mt-0.5">▶</span>
-                <p className="text-white">
-                  <span className="font-semibold">Thời lượng:</span> 90
-                  phút/buổi – 2 buổi
-                </p>
-              </div>
-              <div className="flex items-start space-x-2">
-                <span className="text-red-600 text-lg mt-0.5">▶</span>
-                <p className="text-white">
-                  <span className="font-semibold">Lịch học:</span> Thứ 6 – Thứ 7
-                </p>
-              </div>
-            </div>
-
-            {/* Cột phải */}
-            <div className="space-y-3">
-              <div className="flex items-start space-x-2">
-                <span className="text-red-600 text-lg mt-0.5">▶</span>
-                <p className="text-white">
-                  <span className="font-semibold">Giảng viên:</span> Thế Bảo
-                </p>
-              </div>
-              <div className="flex items-start space-x-2">
-                <span className="text-red-600 text-lg mt-0.5">▶</span>
-                <p className="text-white">
-                  <span className="font-semibold">Phí tham gia:</span> Hoàn toàn
-                  miễn phí
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </div >
