@@ -30,45 +30,11 @@ const menu = [
   },
 ]
 
-function useWindowSize() {
-  // Initialize state with undefined width/height so server and client renders match
-  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
-  const [windowSize, setWindowSize] = useState<{
-    width: undefined | number,
-    height: undefined | number,
-  }>({
-    width: undefined,
-    height: undefined,
-  });
-
-  useEffect(() => {
-    // only execute all the code below in client side
-    // Handler to call on window resize
-    function handleResize() {
-      // Set window width/height to state
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
-
-    // Add event listener
-    window.addEventListener("resize", handleResize);
-
-    // Call handler right away so state gets updated with initial window size
-    handleResize();
-
-    // Remove event listener on cleanup
-    return () => window.removeEventListener("resize", handleResize);
-  }, []); // Empty array ensures that effect is only run on mount
-  return windowSize;
-}
-
-
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   React.useEffect(() => {
     (async () => {
       new Promise(async (rs) => {
@@ -78,14 +44,13 @@ export default function Home() {
       })
     })()
   }, [])
-  if (true) {
+
+  if (isLoading) {
     return (
-      <div className="">
-        <video autoPlay={true} muted loop id="myVideo" className="fixed max-h-screen !min-w-screen max-w-none ml-[50vw] translate-x-[-50%]" >
-          <source src={`/assets/videos/intro.mp4`} type="video/mp4" />
-          Your browser does not support HTML5 video.
-        </video>
-      </div>
+      <video autoPlay={true} muted loop id="myVideo" className="fixed max-h-screen !min-w-screen max-w-none ml-[50vw] translate-x-[-50%]" >
+        <source src={`/assets/videos/intro.mp4`} type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
     )
   }
 
