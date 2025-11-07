@@ -46,10 +46,12 @@ export default function Home() {
 
   if (isLoading) {
     return (
-      <video autoPlay={true} muted loop id="myVideo" className="fixed max-h-screen !min-w-screen max-w-none ml-[50vw] translate-x-[-50%]" >
-        <source src={`/assets/videos/intro.mp4`} type="video/mp4" />
-        Your browser does not support HTML5 video.
-      </video>
+      <div className="fixed bg-black ml-[50vw] translate-x-[-50%]">
+        <video autoPlay={true} muted loop id="myVideo" className="max-h-screen min-w-screen max-w-none " >
+          <source src={`/assets/videos/intro.mp4`} type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
     )
   }
 
