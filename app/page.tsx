@@ -93,7 +93,7 @@ export default function Home() {
             </div>
 
             {/* Button Desktop */}
-            <div className="hidden md:block p-3">
+            <div className="hidden md:block p-3 smoothly-scale">
               <a
                 onClick={toggleMenu}
                 href="#register"
@@ -183,7 +183,7 @@ export default function Home() {
               <a
                 onClick={toggleMenu}
                 href="#register"
-                className="block px-3 py-2 bg-red-900/70 backdrop-blur-sm text-center text-white font-bold rounded-md hover:bg-red-700 transition"
+                className="block px-3 smoothly-scale py-2 bg-red-900/70 backdrop-blur-sm text-center text-white font-bold rounded-md hover:bg-red-700 transition"
               >
                 THAM GIA MIỄN PHÍ
               </a>
@@ -276,14 +276,14 @@ export default function Home() {
                       height={500}
                       src="/assets/banner/4.png"
                       alt="img"
-                      className="object-cover w-1/2 h-1/2"
+                      className="object-cover smoothly-scale w-1/2 h-1/2"
                     />
                     <Image
                       width={500}
                       height={500}
                       src="/assets/banner/5.png"
                       alt="img"
-                      className="object-cover w-1/2 h-1/2"
+                      className="object-cover smoothly-scale w-1/2 h-1/2"
                     />
                   </div>
                   <div className="flex">
@@ -292,14 +292,14 @@ export default function Home() {
                       height={500}
                       src="/assets/banner/6.png"
                       alt="img"
-                      className="object-cover w-1/2 h-1/2"
+                      className="object-cover smoothly-scale w-1/2 h-1/2"
                     />
                     <Image
                       width={500}
                       height={500}
                       src="/assets/banner/3.png"
                       alt="img"
-                      className="object-cover w-1/2 h-1/2"
+                      className="object-cover smoothly-scale w-1/2 h-1/2"
                     />
                   </div>
                 </div>
@@ -562,6 +562,24 @@ export default function Home() {
         style={{ backgroundImage: "url('/background2.jpg')" }}
       >
         <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+          {/* RIGHT - Image */}
+          <div className="text-center">
+            <h2 className="text-xl md:text-2xl font-bold text-red-500 uppercase mb-2">
+              BẠN SẼ NHẬN ĐƯỢC GÌ
+            </h2>
+            <h3 className="text-3xl md:text-4xl font-bold text-white uppercase mb-6">
+              SAU KHI THAM GIA ALPHA NET ?
+            </h3>
+            <div className="inline-block ">
+              <Image
+                width={500}
+                height={500}
+                src="/assets/alpha.png"
+                alt="Trước Sau Học"
+                className="w-full max-w-md object-cover"
+              />
+            </div>
+          </div>
           {/* LEFT - Checklist */}
           <div className="space-y-5">
             {[
@@ -597,24 +615,7 @@ export default function Home() {
             ))}
           </div>
 
-          {/* RIGHT - Image */}
-          <div className="text-center">
-            <h2 className="text-xl md:text-2xl font-bold text-red-500 uppercase mb-2">
-              BẠN SẼ NHẬN ĐƯỢC GÌ
-            </h2>
-            <h3 className="text-3xl md:text-4xl font-bold text-white uppercase mb-6">
-              SAU KHI THAM GIA ALPHA NET ?
-            </h3>
-            <div className="inline-block border-4 border-red-700 rounded-lg overflow-hidden shadow-[0_0_30px_rgba(255,0,0,0.4)]">
-              <Image
-                width={500}
-                height={500}
-                src="/lic.jpg"
-                alt="Trước Sau Học"
-                className="w-full max-w-md object-cover"
-              />
-            </div>
-          </div>
+
         </div>
       </section>
 

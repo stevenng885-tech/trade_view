@@ -36,3 +36,43 @@ html {
   background-size: calc(100%/3) 50%;
   animation: l3 1s infinite linear;
 }
+
+@keyframes l3 {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%
+  }
+
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%
+  }
+
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%
+  }
+
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%
+  }
+}
+
+@keyframes scale {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.2;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.smoothly-scale {
+  animation: scale 1s infinite linear;
+}
+
+.smoothly-scale:hover {
+  animation: none;
+}

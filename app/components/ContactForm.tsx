@@ -96,9 +96,11 @@ const ContactForm = () => {
                     <IoIosWarning /> {errors.email.message}
                 </div>
             }
-            <PrimaryButton isLoading={isLoading} type='submit' >
-                Đăng ký tham gia ngay!
-            </PrimaryButton>
+            <div className='smoothly-scale'>
+                <PrimaryButton isLoading={isLoading} type='submit'  >
+                    Đăng ký tham gia ngay!
+                </PrimaryButton>
+            </div>
         </form>
     )
 }
