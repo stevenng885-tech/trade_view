@@ -765,40 +765,32 @@ export default function Home() {
             <Image
               width={500}
               height={500}
-              src="/assets/1.png"
+              src="/assets/1.jpg"
               alt="Feedback 1"
               className="rounded-2xl shadow-lg w-full object-cover"
             />
             <Image
               width={500}
               height={500}
-              src="/assets/2.png"
+              src="/assets/2.jpg"
               alt="Feedback 2"
               className="rounded-2xl shadow-lg w-full object-cover"
             />
             <Image
               width={500}
               height={500}
-              src="/assets/3.png"
+              src="/assets/3.jpg"
               alt="Feedback 3"
               className="rounded-2xl shadow-lg w-full object-cover"
             />
             <Image
               width={500}
               height={500}
-              src="/assets/4.png"
-              alt="Feedback 3"
-              className="rounded-2xl shadow-lg w-full object-cover"
-            />
-            <Image
-              width={500}
-              height={500}
-              src="/assets/5.png"
+              src="/assets/4.jpg"
               alt="Feedback 3"
               className="rounded-2xl shadow-lg w-full object-cover"
             />
           </div>
-
         </div>
       </section>
 
@@ -1061,8 +1053,7 @@ export default function Home() {
             Đừng để bạn tiếp tục thua lỗ thêm một ngày nào nữa.
           </p>
           <p className="text-red-500 font-bold uppercase">
-            Hãy cho bản thân 3 buổi để thay đổi cách bạn nhìn thị trường – mãi
-            mãi.
+            Hãy để bản thân tìm đúng cộng đồng – nơi giúp bạn hiểu thị trường và kiếm lợi nhuận một cách thực chiến.
           </p>
         </div>
       </section>
