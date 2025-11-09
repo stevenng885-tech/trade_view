@@ -91,3 +91,8 @@ html {
   background-image: url('/public/background1.jpg');
   z-index: -10;
 }
+
+.privacy:hover,
+.disclaimer:hover {
+  color: #ccc !important
+}

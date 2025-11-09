@@ -1049,6 +1049,25 @@ export default function Home() {
           </p>
         </div>
       </section>
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#160000] border-t border-red-700 text-white">
+        <div className="flex justify-between container mx-auto">
+
+          <div className="flex justify-center">
+            <div className="flex gap-2 ">
+              <a href="/disclaimer" className="disclaimer">
+                Điều Khoản
+              </a>
+              |
+              <a href="/privacy" className="privacy">
+                Bảo Mật
+              </a>
+            </div>
+          </div>
+          <div className="flex justify-center">
+            © 2025 Alpha Net. All rights reserved.
+          </div>
+        </div>
+      </section>
     </div >
   );
 }
