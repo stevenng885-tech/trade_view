@@ -321,93 +321,86 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            {/* Label */}
-            {/* <div className="absolute -bottom-8 px-6 py-3 rounded-md flex justify-center shadow-lg w-[90%] max-w-sm">
-              <Image
-                width={500}
-                height={500}
-                src="/assets/banner/btc.png"
-                alt="img"
-                className="object-cover w-full h-full"
-              />
-            </div> */}
           </div>
         </div>
       </section>
 
-      {/* Common Trading Mistakes */}
-      {/* Common Trading Mistakes Section */}
       <section
         className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#180000] bg-cover bg-center"
         style={{ backgroundImage: "url('/background-chart-red.png')" }}
       >
-        <div className="container mx-auto grid md:grid-cols-2 gap-10 items-center">
-          {/* LEFT: Image */}
-          <div className="flex justify-center">
-            <div className="rounded-xl overflow-hidden border-4 border-red-700 shadow-[0_0_30px_rgba(255,0,0,0.4)]">
+        <div className="container mx-auto flex flex-col xl:flex-row gap-10 items-center">
+          <div className="h-full flex gap-5 items-center rounded-xl p-2 border-2  border-red-800  bg-red-950/30">
+            <div>
               <Image
-                width={500}
-                height={500}
-                src="/trader-chart.jpg"
-                alt="Trader nhìn biểu đồ"
-                className="w-full h-full object-cover"
+                src="/assets/svg/money.svg"
+                width={100}
+                height={100}
+                alt="money icon"
               />
             </div>
+            <div>
+              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-red-700 dark:text-red-400 mb-2">
+                Thua Liên Tục Mà Không Hiểu Vì Sao
+              </p>
+              <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+                Vào lệnh thấy đúng hướng thì cắt non, sai hướng thì cố gồng. Cuối cùng tài khoản cứ nhỏ dần mà chẳng biết lỗi nằm ở đâu.
+              </p>
+            </div>
           </div>
-
-          {/* RIGHT: Text */}
-          <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-white uppercase">
-              TRADE MỚI THUA LỖ HAY GẶP PHẢI!
-            </h2>
-
-            <ul className="space-y-3 text-lg text-gray-200">
-              <li className="flex items-start">
-                <span className="text-red-600 mr-2">▶</span>
-                <span>
-                  <span className="text-red-500 font-semibold">90%</span> trader
-                  thua lỗ trong thị trường Crypto
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-red-600 mr-2">▶</span>
-                <span>
-                  Học rất nhiều khoá học giao dịch nhưng vẫn{" "}
-                  <span className="text-red-500 font-semibold">thua lỗ</span>
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-red-600 mr-2">▶</span>
-                <span>
-                  Giao dịch theo <span className="uppercase italic">cảm tính</span> hoặc
-                  tín hiệu từ người khác{" "}
-                  <span className="text-red-500 font-semibold">
-                    → Cháy tài khoản
-                  </span>
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-red-600 mr-2">▶</span>
-                <span>
-                  Trader{" "}
-                  <span className="text-red-500 font-semibold">
-                    không kiểm soát được tâm lý
-                  </span>{" "}
-                  và vốn
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-red-600 mr-2">▶</span>
-                <span>
-                  Không hiểu được{" "}
-                  <span className="text-red-500 font-semibold">
-                    tâm lý thị trường
-                  </span>{" "}
-                  đằng sau mô hình giá
-                </span>
-              </li>
-            </ul>
+          <div className="h-full flex gap-5 items-center rounded-xl p-2 border-2 bg-orange-950/30 border-orange-800 ">
+            <div>
+              <Image
+                src="/assets/svg/candlestick.svg"
+                width={100}
+                height={100}
+                alt="money icon"
+              />
+            </div>
+            <div>
+              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-orange-700 mb-2">
+                Không Biết Đọc Biểu Đồ
+              </p>
+              <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+                Nhìn nến, nhìn chỉ báo nhưng không hiểu ý nghĩa. Toàn đoán mò theo cảm giác hoặc nghe người khác nói rồi vào lệnh theo.
+              </p>
+            </div>
+          </div>
+          <div className="h-full flex gap-5 items-center rounded-xl p-2 border-2 bg-yellow-950/30 border-yellow-800 ">
+            <div>
+              <Image
+                src="/assets/svg/list.svg"
+                width={100}
+                height={100}
+                alt="money icon"
+              />
+            </div>
+            <div>
+              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-orange-700 mb-2">
+                Dễ Bị Cảm Xúc Chi Phối
+              </p>
+              <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+                Giá lên thì tiếc, giá xuống thì sợ. Vừa fomo vừa lo lắng khiến mọi quyết định đều vội vàng, thiếu kiểm soát.
+              </p>
+            </div>
+          </div>
+          <div className="h-full flex gap-5 items-center rounded-xl p-2 border-2 bg-blue-950/30 border-blue-800 ">
+            <div>
+              <Image
+                src="/assets/svg/emotion.svg"
+                width={100}
+                height={100}
+                alt="money icon"
+              />
+            </div>
+            <div>
+              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-orange-700 mb-2">
+                Không Có Kế Hoạch Rõ Ràng
+              </p>
+              <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+                Không biết khi nào nên vào – khi nào nên dừng. Giao dịch kiểu “được thì ăn, thua thì chịu”, nên không thể tiến xa.
+              </p>
+            </div>
           </div>
         </div>
       </section>
