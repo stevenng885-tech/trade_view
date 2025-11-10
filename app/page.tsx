@@ -372,7 +372,7 @@ export default function Home() {
           <div className="h-full flex gap-5 items-center rounded-xl p-2 border-2 bg-yellow-950/30 border-yellow-800 ">
             <div>
               <Image
-                src="/assets/svg/list.svg"
+                src="/assets/svg/emotion.svg"
                 width={100}
                 height={100}
                 alt="money icon"
@@ -390,7 +390,7 @@ export default function Home() {
           <div className="h-full flex gap-5 items-center rounded-xl p-2 border-2 bg-blue-950/30 border-blue-800 ">
             <div>
               <Image
-                src="/assets/svg/emotion.svg"
+                src="/assets/svg/list.svg"
                 width={100}
                 height={100}
                 alt="money icon"
