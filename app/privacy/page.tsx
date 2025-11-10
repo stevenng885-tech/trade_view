@@ -7,8 +7,6 @@ const Page = () => {
                 <h1 className="text-2xl sm:text-3xl font-semibold">⚠️ CHÍNH SÁCH BẢO MẬT THÔNG TIN</h1>
                 <p className="mt-2 text-sm text-gray-500">Cập nhật lần cuối: 20/10/2025</p>
             </header>
-
-
             <div className="space-y-8 text-base">
                 <section>
                     <h2 className="text-xl font-semibold">Cảnh Báo Quan Trọng</h2>
@@ -17,8 +15,6 @@ const Page = () => {
                     </p>
 
                 </section>
-
-
                 <section>
                     <h2 className="text-xl font-semibold">1. Mục Đích Thông Tin</h2>
                     <p className="mt-3">
