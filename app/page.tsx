@@ -372,7 +372,7 @@ export default function Home() {
               />
             </div>
             <div>
-              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-orange-700 mb-2">
+              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-orange-400 mb-2">
                 Không Biết Đọc Biểu Đồ
               </p>
               <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
@@ -390,7 +390,7 @@ export default function Home() {
               />
             </div>
             <div>
-              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-orange-700 mb-2">
+              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-yellow-400 mb-2">
                 Dễ Bị Cảm Xúc Chi Phối
               </p>
               <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
@@ -408,7 +408,7 @@ export default function Home() {
               />
             </div>
             <div>
-              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-orange-700 mb-2">
+              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-blue-800 mb-2">
                 Không Có Kế Hoạch Rõ Ràng
               </p>
               <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
@@ -430,232 +430,147 @@ export default function Home() {
             Chúng tôi mang đến hệ thống công cụ và tư duy giao dịch thực chiến giúp bạn làm chủ thị trường từng bước – không còn loay hoay hay đi lạc hướng nữa.
           </p>
         </div>
-        <div className="container mx-auto grid-cols-5 items-center">
-          <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
-            breakpoints={{
-              1: {
-                slidesPerView: 1,
-                spaceBetween: 40,
-              },
-              1024: {
-                slidesPerView: 3,
-                spaceBetween: 50,
-              },
-            }}
-            pagination={{
-              clickable: true,
-            }}
-            loop={true}
-            autoplay={{
-              delay: 1500,
-              disableOnInteraction: false,
-            }}
-            className="mySwiper"
-            modules={[Autoplay, Navigation]}
-          >
-            <SwiperSlide>
-              <div className="h-full flex gap-5 items-center rounded-xl p-2 border-2  border-red-800  bg-red-950/30">
-                <div>
-                  <Image
-                    src="/assets/svg/signal.svg"
-                    width={100}
-                    height={100}
-                    alt="money icon"
-                  />
-                </div>
-                <div>
-                  <p className="font-black text-[4.5vw] md:text-[1.1rem] text-red-700 dark:text-red-400 mb-2">
-                    Tín Hiệu Giao Dịch Chuẩn Xác
-                  </p>
-                  <p className="text-[#ccc] mb-5 text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
-                    Cập nhật tín hiệu real-time với độ tin cậy cao, giúp bạn nhận biết điểm vào – ra lệnh rõ ràng và chủ động kiểm soát rủi ro.
-                  </p>
-                  <ul className="text-[#ccc]">
-                    <li className="flex items-center">
-                      <span className="text-green-600 mr-2"><FaCheck /></span>
-                      <span className="capitalize">
-                        Thông báo tức thì theo biến động thị trường
-                      </span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="text-green-600 mr-2"><FaCheck /></span>
-                      <span className="capitalize">
-                        Gợi ý điểm Entry/Exit hợp lý
-                      </span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="text-green-600 mr-2"><FaCheck /></span>
-                      <span className="capitalize">
-                        Định hướng cắt lỗ an toàn
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="h-full flex gap-5 items-center rounded-xl p-2 border-2  border-red-800  bg-red-950/30">
-                <div>
-                  <Image
-                    src="/assets/svg/indicator.svg"
-                    width={100}
-                    height={100}
-                    alt="money icon"
-                  />
-                </div>
-                <div>
-                  <p className="font-black text-[4.5vw] md:text-[1.1rem] text-red-700 dark:text-red-400 mb-2">
-                    Phân Tích Biểu Đồ Chuyên Sâu
-                  </p>
-                  <p className="text-[#ccc] mb-5 text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
-                    Đọc thị trường như pro với cách phân tích đa lớp: xu hướng, vùng cung cầu và mô hình giá.
-                  </p>
-                  <ul className="text-[#ccc]">
-                    <li className="flex items-center">
-                      <span className="text-green-600 mr-2"><FaCheck /></span>
-                      <span className="capitalize">
-                        Nhận diện xu hướng mạnh/yếu
-                      </span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="text-green-600 mr-2"><FaCheck /></span>
-                      <span className="capitalize">
-                        Xác định hỗ trợ – kháng cự trọng yếu
-                      </span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="text-green-600 mr-2"><FaCheck /></span>
-                      <span className="capitalize">
-                        Phát hiện mô hình đảo chiều và tiếp diễn
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="h-full flex gap-5 items-center rounded-xl p-2 border-2  border-red-800  bg-red-950/30">
-                <div>
-                  <Image
-                    src="/assets/svg/guide.svg"
-                    width={100}
-                    height={100}
-                    alt="money icon"
-                  />
-                </div>
-                <div>
-                  <p className="font-black text-[4.5vw] md:text-[1.1rem] text-red-700 dark:text-red-400 mb-2">
-                    Hướng Dẫn Sử Dụng Chỉ Báo
-                  </p>
-                  <p className="text-[#ccc] mb-5 text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
-                    Không chỉ cài đặt – mà còn hiểu bản chất của từng công cụ kỹ thuật.
-                  </p>
-                  <ul className="text-[#ccc]">
-                    <li className="flex items-center">
-                      <span className="text-green-600 mr-2"><FaCheck /></span>
-                      <span className="capitalize">
-                        Hướng dẫn từng bước dễ hiểu
-                      </span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="text-green-600 mr-2"><FaCheck /></span>
-                      <span className="capitalize">
-                        Ứng dụng thực tế trên chart
-                      </span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="text-green-600 mr-2"><FaCheck /></span>
-                      <span className="capitalize">
-                        Video hướng dẫn chi tiết
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="h-full flex gap-5 items-center rounded-xl p-2 border-2  border-red-800  bg-red-950/30">
-                <div>
-                  <Image
-                    src="/assets/svg/focus.svg"
-                    width={100}
-                    height={100}
-                    alt="money icon"
-                  />
-                </div>
-                <div>
-                  <p className="font-black text-[4.5vw] md:text-[1.1rem] text-red-700 dark:text-red-400 mb-2">
-                    Chiến Lược Quản Lý Vốn & Rủi Ro
-                  </p>
-                  <p className="text-[#ccc] mb-5 text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
-                    Bí quyết giúp tài khoản bền vững – lợi nhuận đi đôi cùng kỷ luật.
-                  </p>
-                  <ul className="text-[#ccc]">
-                    <li className="flex items-center">
-                      <span className="text-green-600 mr-2"><FaCheck /></span>
-                      <span className="capitalize">
-                        Tối ưu tỉ lệ vào lệnh
-                      </span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="text-green-600 mr-2"><FaCheck /></span>
-                      <span className="capitalize">
-                        Kiểm soát rủi ro chặt chẽ
-                      </span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="text-green-600 mr-2"><FaCheck /></span>
-                      <span className="capitalize">
-                        Duy trì cân bằng danh mục
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="h-full flex gap-5 items-center rounded-xl p-2 border-2  border-red-800  bg-red-950/30">
-                <div>
-                  <Image
-                    src="/assets/svg/improved.svg"
-                    width={100}
-                    height={100}
-                    alt="money icon"
-                  />
-                </div>
-                <div>
-                  <p className="font-black text-[4.5vw] md:text-[1.1rem] text-red-700 dark:text-red-400 mb-2">
-                    Tư Duy Giao Dịch Thực Chiến
-                  </p>
-                  <p className="text-[#ccc] mb-5 text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
-                    Học cách nhìn thị trường như trader chuyên nghiệp – không theo cảm tính, chỉ theo dữ liệu và kế hoạch.
-                  </p>
-                  <ul className="text-[#ccc]">
-                    <li className="flex items-center">
-                      <span className="text-green-600 mr-2"><FaCheck /></span>
-                      <span className="capitalize">
-                        Rèn luyện tâm lý kỷ luật
-                      </span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="text-green-600 mr-2"><FaCheck /></span>
-                      <span className="capitalize">
-                        Tư duy dòng tiền & hành vi giá
-                      </span>
-                    </li>
-                    <li className="flex items-center">
-                      <span className="text-green-600 mr-2"><FaCheck /></span>
-                      <span className="capitalize">
-                        Xây dựng kế hoạch giao dịch dài hạn
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </SwiperSlide>
-          </Swiper>
+        <div className="container mx-auto flex flex-col xl:flex-row gap-10">
+          <div className="rounded-xl p-2 border-2  border-blue-800  bg-slate-800">
+            <p className="font-black text-[4.5vw] md:text-[1.1rem] text-blue-400 mb-2">
+              Tín Hiệu Giao Dịch Chuẩn Xác
+            </p>
+            <p className="text-[#ccc] mb-5 text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+              Cập nhật tín hiệu real-time với độ tin cậy cao, giúp bạn nhận biết điểm vào – ra lệnh rõ ràng và chủ động kiểm soát rủi ro.
+            </p>
+            <ul className="text-[#ccc]">
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2"><FaCheck /></span>
+                <span className="capitalize">
+                  Thông báo tức thì theo biến động thị trường
+                </span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2"><FaCheck /></span>
+                <span className="capitalize">
+                  Gợi ý điểm Entry/Exit hợp lý
+                </span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2"><FaCheck /></span>
+                <span className="capitalize">
+                  Định hướng cắt lỗ an toàn
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div className="rounded-xl p-2 border-2  bg-slate-800 border-purple-800">
+            <p className="font-black text-[4.5vw] md:text-[1.1rem] text-purple-400 mb-2">
+              Phân Tích Biểu Đồ Chuyên Sâu
+            </p>
+            <p className="text-[#ccc] mb-5 text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+              Đọc thị trường như pro với cách phân tích đa lớp: xu hướng, vùng cung cầu và mô hình giá.
+            </p>
+            <ul className="text-[#ccc]">
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2"><FaCheck /></span>
+                <span className="capitalize">
+                  Nhận diện xu hướng mạnh/yếu
+                </span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2"><FaCheck /></span>
+                <span className="capitalize">
+                  Xác định hỗ trợ – kháng cự trọng yếu
+                </span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2"><FaCheck /></span>
+                <span className="capitalize">
+                  Phát hiện mô hình đảo chiều và tiếp diễn
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div className="rounded-xl p-2 border-2  bg-slate-800 border-orange-800">
+            <p className="font-black text-[4.5vw] md:text-[1.1rem] text-orange-400">
+              Hướng Dẫn Sử Dụng Chỉ Báo
+            </p>
+            <p className="text-[#ccc] mb-5 text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+              Không chỉ cài đặt – mà còn hiểu bản chất của từng công cụ kỹ thuật.
+            </p>
+            <ul className="text-[#ccc]">
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2"><FaCheck /></span>
+                <span className="capitalize">
+                  Hướng dẫn từng bước dễ hiểu
+                </span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2"><FaCheck /></span>
+                <span className="capitalize">
+                  Ứng dụng thực tế trên chart
+                </span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2"><FaCheck /></span>
+                <span className="capitalize">
+                  Video hướng dẫn chi tiết
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div className="rounded-xl p-2 border-2  bg-slate-800 border-green-800">
+            <p className="font-black text-[4.5vw] md:text-[1.1rem] text-green-400 mb-2">
+              Chiến Lược Quản Lý Vốn & Rủi Ro
+            </p>
+            <p className="text-[#ccc] mb-5 text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+              Bí quyết giúp tài khoản bền vững – lợi nhuận đi đôi cùng kỷ luật.
+            </p>
+            <ul className="text-[#ccc]">
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2"><FaCheck /></span>
+                <span className="capitalize">
+                  Tối ưu tỉ lệ vào lệnh
+                </span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2"><FaCheck /></span>
+                <span className="capitalize">
+                  Kiểm soát rủi ro chặt chẽ
+                </span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2"><FaCheck /></span>
+                <span className="capitalize">
+                  Duy trì cân bằng danh mục
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div className="rounded-xl p-2 border-2  border-blue-800  bg-slate-800">
+            <p className="font-black text-[4.5vw] md:text-[1.1rem] text-blue-400 mb-2">
+              Tư Duy Giao Dịch Thực Chiến
+            </p>
+            <p className="text-[#ccc] mb-5 text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
+              Học cách nhìn thị trường như trader chuyên nghiệp – không theo cảm tính, chỉ theo dữ liệu và kế hoạch.
+            </p>
+            <ul className="text-[#ccc]">
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2"><FaCheck /></span>
+                <span className="capitalize">
+                  Rèn luyện tâm lý kỷ luật
+                </span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2"><FaCheck /></span>
+                <span className="capitalize">
+                  Tư duy dòng tiền & hành vi giá
+                </span>
+              </li>
+              <li className="flex items-center">
+                <span className="text-green-600 mr-2"><FaCheck /></span>
+                <span className="capitalize">
+                  Xây dựng kế hoạch giao dịch dài hạn
+                </span>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#100000] bg-cover bg-center">
@@ -893,7 +808,7 @@ export default function Home() {
               </p>
             </div>
             <div className="gap-5 items-center rounded-xl p-2 border-2 bg-yellow-950/30 border-yellow-800 ">
-              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-orange-700 mb-2">
+              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-yellow-700 mb-2">
                 Quản Lý Rủi Ro & Tối Ưu Lợi Nhuận
               </p>
               <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
@@ -904,7 +819,7 @@ export default function Home() {
               </p>
             </div>
             <div className="gap-5 items-center rounded-xl p-2 border-2 bg-blue-950/30 border-blue-800 ">
-              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-orange-700 mb-2">
+              <p className="font-black text-[4.5vw] md:text-[1.1rem] text-blue-700 mb-2">
                 Hỗ Trợ 1-1 & Cộng Đồng Thực Chiến
               </p>
               <p className="text-[#ccc] text-[3.5vw] md:text-[0.88rem] text-foreground/80 leading-relaxed">
@@ -914,7 +829,7 @@ export default function Home() {
                 Cập nhật tín hiệu, phân tích, tài liệu độc quyền mỗi ngày.
               </p>
             </div>
-            <div className="gap-5 items-center rounded-xl p-2 border-2  border-red-800  bg-red-950/30">
+            <div className="gap-5 items-center rounded-xl p-2 border-2  border-pink-800  bg-pink-950/30">
               <p className="font-black text-[4.5vw] md:text-[1.1rem] text-red-700 dark:text-red-400 mb-2">
                 Tự Tin Giao Dịch – Không Phụ Thuộc Vào Ai
               </p>
@@ -1002,63 +917,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Target Audience */}
-      {/* SECTION: Khóa học dành cho ai */}
-      <section
-        className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#190000] bg-cover bg-center"
-        style={{ backgroundImage: "url('/background3.jpg')" }}
-      >
-        <div className="container mx-auto grid md:grid-cols-2 gap-12 items-center">
-          {/* LEFT - Image */}
-          <div className="flex justify-center">
-            <Image
-              width={500}
-              height={500}
-              src="/kh.jpeg"
-              alt="Trader Image"
-              className="rounded-lg border-4 border-red-700 shadow-[0_0_30px_rgba(255,0,0,0.4)] max-w-md"
-            />
-          </div>
-
-          {/* RIGHT - Content */}
-          <div className="text-white">
-            <h3 className="text-red-600 font-bold uppercase text-lg mb-2">
-              Cộng Đồng Này
-            </h3>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 uppercase">
-              Dành cho những ai?
-            </h2>
-
-            <ul className="space-y-3 text-gray-200">
-              {[
-                "Trader mới bắt đầu",
-                "Trader đã giao dịch nhưng thua lỗ",
-                "Doanh nhân hoặc nhà đầu tư có vốn nhàn rỗi muốn mở rộng kênh đầu tư",
-              ].map((item, i) => (
-                <li key={i} className="flex items-start space-x-3">
-                  <svg
-                    className="w-4 h-4 text-red-500 mt-1 flex-shrink-0"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414L8.414 15 4 10.586a1 1 0 111.414-1.414L8.414 12.172l7.293-7.293a1 1 0 011.414 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                  <p>{item}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-
-
-
-      {/* Value Proposition */}
       {/* SECTION: ƯU ĐÃI & FORM ĐĂNG KÝ */}
       <section
         className="relative py-20 px-4 sm:px-6 lg:px-8 bg-[#250000] bg-cover bg-center"
